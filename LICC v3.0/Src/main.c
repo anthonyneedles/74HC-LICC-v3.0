@@ -10,12 +10,20 @@
 * 	Author: Anthony Needles
 ******************************************************************************/
 #include "stm32f030x8.h"
+#include "ClockConfig.h"
+#include "SysTick.h"
+
+/******************************************************************************
+*	Private Definitions
+******************************************************************************/
+#define TIMESLICE_PERIOD_MS 20U
 
 int main(void)
 {
-  while (1)
-  {
+	ClkCfgInit();
+	SysTickInit();
 
-  }
-
+	while (1){
+		SysTickWaitTask(TIMESLICE_PERIOD_MS);
+	}
 }
