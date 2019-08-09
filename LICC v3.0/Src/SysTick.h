@@ -50,7 +50,7 @@ void SysTickInit(void);
 *
 * Return: 		None
 ******************************************************************************/
-void SysTickWaitTask(const uint32_t);
+//void SysTickWaitTask(const uint32_t);
 
 /******************************************************************************
 * SysTickHandler - Interrupt Handler
